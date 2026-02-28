@@ -4,7 +4,7 @@ export const siteData = {
             title: "Shaping Creative Leaders in Fashion, Interior & Design",
             subtitle: "Industry-focused education powered by practical training, expert mentorship and real-world exposure.",
             cta: "Explore Programs",
-            image: "assets/hero.jpg"
+            image: "courses/hero.jpg"
         },
         stats: [
             { value: "25+", label: "Years Excellence" },
@@ -85,7 +85,7 @@ export const siteData = {
             id: 'fashion-design',
             title: "Fashion Design",
             description: "A comprehensive program to master apparel design, garment construction, and fashion merchandising.",
-            image: "assets/fashion.jpg",
+            image: "courses/fashion.jpg",
             intro: "Fashion is one of the most desired and lucrative professions. It is all about the systematic process of creating an innovative outfit with beautiful combinations of color, texture, design, fabric, and ornamentation.",
             careerOutcomes: ["Fashion Merchandising", "Boutique Owner", "Fashion Stylist", "Production & Marketing Roles", "Apparel Designer"],
             programs: [
@@ -116,7 +116,7 @@ export const siteData = {
             id: 'interior-design',
             title: "Interior Design",
             description: "Professional design course focusing on making interior spaces visually and physically pleasing while maintaining functionality.",
-            image: "assets/interior.jpg",
+            image: "courses/interior.jpg",
             intro: "Interior Designers Work with space to make design plans or blueprints that include structural features, considering characteristics like colors, lighting, and furniture.",
             careerOutcomes: ["Interior Consultant", "Space Planner", "Furniture Designer", "Set Designer", "CAD Draftsman"],
             programs: [
@@ -140,7 +140,7 @@ export const siteData = {
             id: 'textile-design',
             title: "Textile Design",
             description: "Step into the world of creation with this course focusing on woven, printed, and surface ornamented fabrics.",
-            image: "assets/textile.jpg",
+            image: "courses/textile.jpg",
             intro: "Textile designers inspire collections, trends, and styles. It is the process of creating designs for woven, printed fabrics or surface ornamented fabrics.",
             careerOutcomes: ["Textile Artist", "Fabric Analyzer", "Dyeing & Printing Consultant", "Trend Forecaster"],
             programs: [
@@ -157,7 +157,7 @@ export const siteData = {
             id: 'luxury-brand-management',
             title: "Luxury Brand Management",
             description: "Equips students with the knowledge and skills to manage, market, and strategize for premium luxury fashion brands.",
-            image: "assets/luxury.jpg",
+            image: "courses/luxury.jpg",
             intro: "It emphasizes strategic brand management, luxury consumer behavior, marketing, and the global luxury market landscape.",
             careerOutcomes: ["Brand Manager", "Retail Operations Head", "Visual Merchandiser", "PR & Communications Executive"],
             programs: [
@@ -174,7 +174,7 @@ export const siteData = {
             id: 'art-and-craft',
             title: "Art & Craft",
             description: "Brilliantly designed for those eager to enhance their practical creativity in fine arts and handcrafts.",
-            image: "assets/art.jpg",
+            image: "courses/art.jpg",
             intro: "Art and Craft smoothly mixes theoretical knowledge with ample practical exposure.",
             careerOutcomes: ["Independent Artist", "Craft Instructor", "Exhibition Curator", "Creative Director"],
             programs: [
@@ -191,7 +191,7 @@ export const siteData = {
             id: 'boutique-management',
             title: "Boutique Management",
             description: "Blends fashion design fundamentals, business strategies, and entrepreneurial skills to successfully run a boutique.",
-            image: "assets/boutique.jpg",
+            image: "courses/boutique.jpg",
             intro: "A specialized training program designed to equip individuals with the skills needed to start and grow a lifestyle boutique.",
             careerOutcomes: ["Boutique Owner", "Retail Manager", "Fashion Buyer", "E-commerce Entrepreneur"],
             programs: [

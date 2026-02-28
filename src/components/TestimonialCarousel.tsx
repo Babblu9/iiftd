@@ -24,14 +24,14 @@ export default function TestimonialCarousel({ testimonials }: { testimonials: Te
     }, [next]);
 
     return (
-        <section id="testimonials" className="py-24 bg-[var(--color-bg-cream)] relative overflow-hidden z-10">
+        <section id="testimonials" className="py-24 bg-gradient-to-r from-[var(--color-brand-red)] to-white/10 backdrop-blur-md relative overflow-hidden z-10">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                 <FadeIn className="text-center mb-16">
                     <h2 className="font-heading text-4xl md:text-5xl font-bold text-[var(--color-heading)] mt-3">What Our Students Say</h2>
                 </FadeIn>
 
                 <FadeIn delay={0.2} direction="up">
-                    <div className="relative bg-white rounded-3xl p-8 md:p-16 box-shadow-soft">
+                    <div className="relative bg-white/30 backdrop-blur-lg border border-white/20 rounded-3xl p-8 md:p-16 shadow-lg">
                         <Quote className="absolute top-8 left-8 text-[var(--color-brand-red)]/10 w-16 h-16 md:w-24 md:h-24" />
 
                         <div className="relative h-[250px] md:h-[200px] flex items-center justify-center">
