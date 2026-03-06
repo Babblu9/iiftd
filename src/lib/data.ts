@@ -81,126 +81,350 @@ export const siteData = {
         }
     },
     courses: [
+        // FASHION DESIGN CATEGORY
         {
-            id: 'fashion-design',
-            title: "Fashion Design",
-            description: "A comprehensive program to master apparel design, garment construction, and fashion merchandising.",
-            image: "courses/fashion.jpg",
-            intro: "Fashion is one of the most desired and lucrative professions. It is all about the systematic process of creating an innovative outfit with beautiful combinations of color, texture, design, fabric, and ornamentation.",
-            careerOutcomes: ["Fashion Merchandising", "Boutique Owner", "Fashion Stylist", "Production & Marketing Roles", "Apparel Designer"],
+            id: 'fashion-design-diploma',
+            title: "Diploma in Fashion Design",
+            description: "A foundational program covering apparel design, pattern making, and garment construction.",
+            image: "/courses/fashion.jpg",
+            intro: "Ideal for beginners looking to enter the fashion industry quickly. This 1-year diploma covers the essentials of sketching, fabric selection, and machine handling.",
+            careerOutcomes: ["Assistant Designer", "Pattern Maker", "Fashion Illustrator", "Sampling Coordinator"],
             programs: [
                 {
-                    name: "6 Month Certificate",
-                    duration: "6 Months",
-                    eligibility: "Any one with a passion to learn can apply.",
-                    description: "Apt for students strongly creative and possessing an ability to undertake managerial responsibilities.",
-                    modules: ["Basic Design", "Design Idea", "Sketching and Illustration", "Embroidery", "Drafting & Pattern making", "Garment Construction"]
-                },
-                {
-                    name: "Diploma Certificate (1 Year)",
-                    duration: "12 Months",
-                    eligibility: "Class X from any recognized board.",
-                    description: "A logical, sequential, hands-on experience enabling students to conceptualize designs and construct garments.",
-                    modules: ["Basic Design", "Sketching", "Embroidery", "Drafting & Pattern making", "Textile Science", "Fashion CAD", "Fashion shows"]
-                },
-                {
-                    name: "B.SC IN FASHION DESIGN",
-                    duration: "3 years",
-                    eligibility: "Completion of 10+2 (any stream) with 50% aggregate.",
-                    description: "Combines creativity with technical skills to prepare students for various roles in the fashion industry.",
-                    modules: ["Fashion Illustration", "Textile Science", "Pattern Making", "Fashion Marketing", "CAD", "Styling", "History of Fashion"]
+                    name: "Diploma",
+                    duration: "1 Year",
+                    eligibility: "10th or 12th pass from any recognized board.",
+                    description: "Learn the core basics of fashion design.",
+                    modules: ["Fashion Illustration", "Basic Drafting & Pattern Making", "Garment Construction", "Textile Science", "Embroidery Techniques"]
                 }
             ]
         },
         {
-            id: 'interior-design',
-            title: "Interior Design",
-            description: "Professional design course focusing on making interior spaces visually and physically pleasing while maintaining functionality.",
-            image: "courses/interior.jpg",
-            intro: "Interior Designers Work with space to make design plans or blueprints that include structural features, considering characteristics like colors, lighting, and furniture.",
-            careerOutcomes: ["Interior Consultant", "Space Planner", "Furniture Designer", "Set Designer", "CAD Draftsman"],
+            id: 'fashion-design-advance-diploma',
+            title: "Advance Diploma in Fashion Design",
+            description: "A comprehensive 2-year program focusing on advanced apparel design and business skills.",
+            image: "/courses/about-discover.jpg",
+            intro: "Building heavily on foundational skills, this program introduces Computer-Aided Design (CAD), merchandising, and deeper technical tailoring to prepare you for mid-level roles.",
+            careerOutcomes: ["Fashion Merchandiser", "CAD Designer", "Boutique Owner", "Fashion Stylist"],
             programs: [
                 {
-                    name: "6 Month Certification",
-                    duration: "6 Months",
-                    eligibility: "Any-one with a passion to learn.",
-                    description: "Undertake managerial responsibilities in Design and Production.",
-                    modules: ["Foundation and Concept", "Sketching", "Color Workshops", "Orthographic Projections", "Furniture Design", "Site Visits"]
-                },
-                {
-                    name: "B.SC IN INTERIOR DESIGN",
-                    duration: "3 years",
-                    eligibility: "Completion of 10+2 (any stream) with 50%.",
-                    description: "Blends creativity with technical skills to prepare students for careers in designing functional interior spaces.",
-                    modules: ["Theory of Interior Design", "Materials and Construction", "Furniture Design", "CAD", "Lighting and Acoustics", "Sustainable Design"]
+                    name: "Advance Diploma",
+                    duration: "2 Years",
+                    eligibility: "10+2 from any recognized board.",
+                    description: "Intermediate technical skills paired with digital tools and business.",
+                    modules: ["Advanced Fashion Illustration", "Draping Techniques", "Fashion CAD (Illustrator/Photoshop)", "Apparel Merchandising", "History of Costumes", "Portfolio Development"]
                 }
             ]
         },
         {
-            id: 'textile-design',
-            title: "Textile Design",
-            description: "Step into the world of creation with this course focusing on woven, printed, and surface ornamented fabrics.",
-            image: "courses/textile.jpg",
-            intro: "Textile designers inspire collections, trends, and styles. It is the process of creating designs for woven, printed fabrics or surface ornamented fabrics.",
-            careerOutcomes: ["Textile Artist", "Fabric Analyzer", "Dyeing & Printing Consultant", "Trend Forecaster"],
+            id: 'fashion-design-bachelors',
+            title: "Bachelors in Fashion Design",
+            description: "An intensive 3-year degree blending deep technical styling, textile engineering, and apparel business.",
+            image: "/courses/fashion_new.png",
+            intro: "The ultimate undergraduate route to dominating the fashion corporate ladder. Students learn from raw fiber selection through to complex garment manufacturing, marketing, and sustainable practices.",
+            careerOutcomes: ["Lead Fashion Designer", "Costume Designer", "Apparel Production Manager", "Fashion Consultant", "Retail Buyer"],
             programs: [
                 {
-                    name: "6 Months course",
-                    duration: "6 Months",
-                    eligibility: "Anyone with a passion.",
-                    description: "Details out how to design contemporary fabrics.",
-                    modules: ["Creating Motif", "Fabric Details", "Types of Repeats", "Rendering Techniques", "Block and Screen Print"]
+                    name: "B.Sc. / B.Des in Fashion Design",
+                    duration: "3 Years",
+                    eligibility: "10+2 (any stream) with 50% aggregate.",
+                    description: "A full undergraduate degree with extensive industry exposure and projects.",
+                    modules: ["Design Elements & Principles", "Textile & Yarn Science", "Advanced Garment Manufacturing", "Fashion Forecasting", "Sustainable Fashion", "Fashion Retail Management", "Final Collection Project"]
                 }
             ]
         },
+        {
+            id: 'fashion-design-masters',
+            title: "Masters in Fashion Design",
+            description: "A post-graduate deep dive into fashion strategy, leadership, and highly specialized design niches.",
+            image: "/courses/hero.jpg",
+            intro: "Designed for graduates wanting to elevate their creative dominance or transition into fashion management and executive design roles.",
+            careerOutcomes: ["Creative Director", "Fashion Brand Manager", "Trend Forecaster", "Design Educator", "Senior Product Developer"],
+            programs: [
+                {
+                    name: "M.Sc. / MBA in Fashion Design",
+                    duration: "2 Years",
+                    eligibility: "Graduation in any stream.",
+                    description: "Strategic leadership and advanced aesthetic development.",
+                    modules: ["Global Fashion Operations", "Consumer Behavior in Fashion", "Advanced Surface Ornamentation", "Luxury Brand Strategies", "Quality Control & Testing", "Dissertation & Live Industry Project"]
+                }
+            ]
+        },
+        {
+            id: 'fashion-design-master-diploma',
+            title: "Master Diploma in Fashion Design",
+            description: "A fast-tracked 1-year postgraduate diploma focusing on core fashion business and design execution.",
+            image: "/courses/fashion.jpg",
+            intro: "An intensive program for graduates from other fields looking for an expedited, hands-on entry into the higher ranks of the fashion industry.",
+            careerOutcomes: ["Production Executive", "Visual Merchandiser", "Fashion PR", "Sourcing Manager"],
+            programs: [
+                {
+                    name: "Master Diploma",
+                    duration: "1 Year",
+                    eligibility: "Graduation in any stream.",
+                    description: "Accelerated, career-focused post-graduate training.",
+                    modules: ["Intensive Pattern Making", "Fashion Business Management", "Digital Fashion Illustration", "Textile Finishing", "Market Analytics in Fashion"]
+                }
+            ]
+        },
+
+        // INTERIOR DESIGN CATEGORY
+        {
+            id: 'interior-design-diploma',
+            title: "Diploma in Interior Design",
+            description: "A 1-year foundational program covering space planning, colors, and design drafting.",
+            image: "/courses/interior.jpg",
+            intro: "Learn to transform empty rooms into functional, aesthetically pleasing spaces. Perfect for beginners eager to grasp the fundamentals of interior arrangement and drafting.",
+            careerOutcomes: ["Interior Draftsman", "Design Assistant", "Color Consultant", "Space Planner"],
+            programs: [
+                {
+                    name: "Diploma",
+                    duration: "1 Year",
+                    eligibility: "10th or 12th pass from any recognized board.",
+                    description: "Master the essentials of interior spaces and drafting.",
+                    modules: ["Principles of Interior Design", "2D Drafting & Graphics", "Color Psychology", "Furniture Understanding", "Space Planning Basics"]
+                }
+            ]
+        },
+        {
+            id: 'interior-design-advance-diploma',
+            title: "Advance Diploma in Interior Design",
+            description: "A 2-year program blending structural theory with modern digital rendering tools.",
+            image: "/courses/campus.jpg",
+            intro: "Step up your skills by learning 3D software (AutoCAD, SketchUp) alongside deeper construction logic, lighting techniques, and material selection.",
+            careerOutcomes: ["Junior Interior Designer", "3D Visualizer", "Lighting Consultant", "Site Supervisor"],
+            programs: [
+                {
+                    name: "Advance Diploma",
+                    duration: "2 Years",
+                    eligibility: "10+2 from any recognized board.",
+                    description: "Technical graphics combined with construction and lighting knowledge.",
+                    modules: ["CAD in Interiors (AutoCAD & SketchUp)", "Construction Theory & Materials", "Lighting & Acoustics", "Advanced Space Planning", "Estimating & Costing"]
+                }
+            ]
+        },
+        {
+            id: 'interior-design-bachelors',
+            title: "Bachelors in Interior Design",
+            description: "A 3-year premier degree focusing on architecture, commercial spaces, and sustainable interior design.",
+            image: "/courses/interior_new.png",
+            intro: "Our flagship interior degree preparing you to lead major residential, commercial, and corporate design projects from initial blueprint to final execution.",
+            careerOutcomes: ["Senior Interior Designer", "Commercial Space Expert", "Sustainable Design Consultant", "Set Designer"],
+            programs: [
+                {
+                    name: "B.Sc. / B.I.D. in Interior Design",
+                    duration: "3 Years",
+                    eligibility: "10+2 (any stream) with 50% aggregate.",
+                    description: "Complete undergraduate training in spatial engineering and aesthetics.",
+                    modules: ["Architectural Theory", "Advanced 3ds Max Rendering", "Commercial Space Planning", "Sustainable Design Practices", "Landscape Interior Design", "Client Project Management"]
+                }
+            ]
+        },
+        {
+            id: 'interior-design-masters',
+            title: "Masters in Interior Design",
+            description: "A 2-year post-graduate degree for advanced space optimization, project management, and luxury interiors.",
+            image: "/courses/interior.jpg",
+            intro: "Elevate your design career by mastering large-scale project execution, budgeting, luxury client management, and cutting-edge global design trends.",
+            careerOutcomes: ["Principal Designer", "Design Project Manager", "Luxury Interior Specialist", "Design Firm Partner"],
+            programs: [
+                {
+                    name: "M.Sc. / MBA in Interior Design",
+                    duration: "2 Years",
+                    eligibility: "Graduation in any stream.",
+                    description: "Leadership and advanced architectural concepts.",
+                    modules: ["Advanced Project Management", "Luxury Residential Design", "Institutional Space Planning", "Financial Analysis & Budgeting", "Art & Culture in Architecture", "Thesis Project"]
+                }
+            ]
+        },
+        {
+            id: 'interior-design-master-diploma',
+            title: "Master Diploma in Interior Design",
+            description: "A 1-year accelerated postgraduate track focusing on software proficiency and core site management.",
+            image: "/courses/campus.jpg",
+            intro: "An intense plunge into the interior world for graduates, heavily weighted toward practical software application, vendor management, and site execution.",
+            careerOutcomes: ["Site Manager", "Interior Vendor Coordinator", "CAD Specialist", "Design Operations Associate"],
+            programs: [
+                {
+                    name: "Master Diploma",
+                    duration: "1 Year",
+                    eligibility: "Graduation in any stream.",
+                    description: "Fast-tracked technical and management training for graduates.",
+                    modules: ["Intensive CAD & 3D Modeling", "Building Services (HVAC/Plumbing)", "Vendor & Material Sourcing", "Professional Practice", "Fast-Track Space Planning"]
+                }
+            ]
+        },
+
+        // MAKEUP ARTISTRY CATEGORY
+        {
+            id: 'makeup-artistry-diploma',
+            title: "Diploma in Makeup Artistry",
+            description: "A focused program teaching the essential fundamentals of skin, beauty, and foundational makeup.",
+            image: "/courses/makeup_new.png",
+            intro: "Step into the beauty industry with core skills in skin analysis, color matching, and foundational day/evening makeup techniques.",
+            careerOutcomes: ["Beauty Advisor", "Freelance Makeup Artist", "Salon Makeup Assistant"],
+            programs: [
+                {
+                    name: "Diploma",
+                    duration: "6 Months - 1 Year",
+                    eligibility: "10th or 12th pass.",
+                    description: "Learn the core basics of professional makeup.",
+                    modules: ["Skin Anatomy & Prep", "Color Theory", "Day & Evening Looks", "Basic Hair Styling", "Hygiene & Tool Care"]
+                }
+            ]
+        },
+        {
+            id: 'makeup-artistry-advance-diploma',
+            title: "Advance Diploma in Makeup Artistry",
+            description: "Master bridal, high-fashion, and airbrush makeup techniques in this comprehensive program.",
+            image: "/courses/makeup_new.png",
+            intro: "Elevate your artistry by learning lucrative niches like bridal makeup, airbrushing, and advanced hairstyling to serve higher-paying client bases.",
+            careerOutcomes: ["Bridal Makeup Artist", "Airbrush Specialist", "Salon Manager", "Fashion Show Artist"],
+            programs: [
+                {
+                    name: "Advance Diploma",
+                    duration: "1 - 2 Years",
+                    eligibility: "10+2 from any recognized board.",
+                    description: "Advanced techniques for high-end clientele.",
+                    modules: ["Advanced Bridal Makeup (Regional Styles)", "Airbrush Techniques", "High Definition (HD) Makeup", "Creative Fashion Hair Styling", "Client Consultation & Trials"]
+                }
+            ]
+        },
+        {
+            id: 'makeup-artistry-bachelors',
+            title: "Bachelors in Makeup & Cosmetology",
+            description: "A full 3-year degree blending deep cosmetic science, theatrical makeup, and beauty business management.",
+            image: "/courses/makeup_new.png",
+            intro: "The definitive education for beauty leaders. Dive deep into the science of cosmetics, prosthetic makeup for film, and managing large-scale beauty enterprises.",
+            careerOutcomes: ["Celebrity Makeup Artist", "Prosthetics/SFX Artist", "Cosmetologist", "Beauty Brand Founder"],
+            programs: [
+                {
+                    name: "B.Sc. in Cosmetology & Makeup",
+                    duration: "3 Years",
+                    eligibility: "10+2 (any stream).",
+                    description: "Undergraduate degree in advanced beauty and cinematic makeup.",
+                    modules: ["Cosmetic Chemistry", "Theatrical & SFX Makeup", "Prosthetics Application", "Advanced Skin & Hair Treatments", "Beauty Business Management", "Photography & Lighting for Makeup"]
+                }
+            ]
+        },
+        {
+            id: 'makeup-artistry-masters',
+            title: "Masters in Makeup & Beauty Management",
+            description: "A postgraduate degree focused on leading beauty brands, advanced aesthetics, and corporate beauty management.",
+            image: "/courses/makeup_new.png",
+            intro: "For those aiming to sit at the executive level of cosmetic companies, run international salon chains, or lead creative teams on global film sets.",
+            careerOutcomes: ["Cosmetics Brand Director", "Lead SFX Department Head", "Beauty Education Director", "International Salon Chain Manager"],
+            programs: [
+                {
+                    name: "M.Sc. / MBA in Beauty Management",
+                    duration: "2 Years",
+                    eligibility: "Graduation in any stream.",
+                    description: "Corporate beauty leadership and extreme specialization.",
+                    modules: ["Global Beauty Marketing", "Advanced Aesthetics & Laser Intro", "Running a Beauty Enterprise", "Masterclass Training Methods", "Cinematic Character Design"]
+                }
+            ]
+        },
+        {
+            id: 'makeup-artistry-master-diploma',
+            title: "Master Diploma in Professional Makeup",
+            description: "A 1-year accelerated postgraduate track for intense, specialized hands-on makeup training.",
+            image: "/courses/makeup_new.png",
+            intro: "Perfect for graduates pivoting to the beauty industry, focusing purely on high-level execution, portfolio building, and immediate industry placement.",
+            careerOutcomes: ["Editorial Makeup Artist", "Freelance Beauty Entrepreneur", "TV/Film Assistant Artist"],
+            programs: [
+                {
+                    name: "Master Diploma",
+                    duration: "1 Year",
+                    eligibility: "Graduation in any stream.",
+                    description: "Fast-tracked comprehensive makeup artistry for graduates.",
+                    modules: ["Intensive HD & Airbrush", "Editorial & Runway Styling", "Social Media Branding for Artists", "Speed Makeup Techniques", "Portfolio Creation"]
+                }
+            ]
+        },
+
+        // SPECIALIZED COURSES
         {
             id: 'luxury-brand-management',
             title: "Luxury Brand Management",
             description: "Equips students with the knowledge and skills to manage, market, and strategize for premium luxury fashion brands.",
-            image: "courses/luxury.jpg",
+            image: "/courses/luxury.jpg",
             intro: "It emphasizes strategic brand management, luxury consumer behavior, marketing, and the global luxury market landscape.",
             careerOutcomes: ["Brand Manager", "Retail Operations Head", "Visual Merchandiser", "PR & Communications Executive"],
             programs: [
                 {
-                    name: "DIPLOMA IN LUXURY BRAND MANAGEMENT",
-                    duration: "6 months to 1 year",
+                    name: "Specialized Diploma",
+                    duration: "6 Months to 1 Year",
                     eligibility: "Open to students from any background",
-                    description: "A focused academic program equipping students to manage luxury fashion brands.",
-                    modules: ["Luxury Brand Management", "Marketing & Communication", "Retail Management", "Consumer Behavior", "Visual Merchandising"]
+                    description: "A focused academic program equipping students to manage luxury global brands.",
+                    modules: ["Luxury Brand Strategy", "Premium Marketing & PR", "High-End Retail Management", "Consumer Behavior in Luxury", "Visual Merchandising"]
                 }
             ]
         },
         {
-            id: 'art-and-craft',
-            title: "Art & Craft",
-            description: "Brilliantly designed for those eager to enhance their practical creativity in fine arts and handcrafts.",
-            image: "courses/art.jpg",
-            intro: "Art and Craft smoothly mixes theoretical knowledge with ample practical exposure.",
-            careerOutcomes: ["Independent Artist", "Craft Instructor", "Exhibition Curator", "Creative Director"],
+            id: 'garment-manufacturing-fashion-designing',
+            title: "Garment Manufacturing & Fashion Designing",
+            description: "A dual-focus program combining creative design with mass industrial apparel production logistics.",
+            image: "/courses/hero.jpg",
+            intro: "Learn not just how to design a garment, but how to manufacture it at scale. Understand supply chains, industrial machinery, and factory floor logic.",
+            careerOutcomes: ["Production Manager", "Quality Controller", "Factory Floor Supervisor", "Technical Designer"],
             programs: [
                 {
-                    name: "Art and Craft Certification",
-                    duration: "3 Months to 1 Year",
-                    eligibility: "Anyone hungry for creativity",
-                    description: "Enhance creativity through theoretical knowledge and practical exposure.",
-                    modules: ["Glass Painting", "Charcoal Painting", "Acrylic Painting", "Pencil Sketching", "Clay Painting", "Abstract Art"]
+                    name: "Specialized Course",
+                    duration: "1 Year",
+                    eligibility: "10th or 12th pass.",
+                    description: "Bridging the gap between the design studio and the factory floor.",
+                    modules: ["Industrial Sewing Operations", "Supply Chain & Sourcing", "Mass Pattern Grading", "Apparel Quality Assurance", "Factory Compliance"]
                 }
             ]
         },
         {
-            id: 'boutique-management',
-            title: "Boutique Management",
+            id: 'fashion-styling-communication',
+            title: "Fashion Styling & Communication",
+            description: "Focus purely on crafting brand imagery, editorial shoots, and the visual communication of fashion.",
+            image: "/courses/textile.jpg",
+            intro: "Become the creative force behind fashion magazines, celebrity wardrobes, and advertising campaigns. Learn to tell stories through garments.",
+            careerOutcomes: ["Fashion Stylist", "Fashion Journalist", "Art Director", "Celebrity Stylist", "Content Creator"],
+            programs: [
+                {
+                    name: "Specialized Course",
+                    duration: "6 Months - 1 Year",
+                    eligibility: "Open to all.",
+                    description: "Master the art of creating iconic fashion imagery and text.",
+                    modules: ["Editorial Styling", "Fashion Photography Basics", "Fashion Journalism & Blogging", "Personal Styling", "Creative Direction"]
+                }
+            ]
+        },
+        {
+            id: 'fashion-design-boutique-management',
+            title: "Fashion Design & Boutique Management",
             description: "Blends fashion design fundamentals, business strategies, and entrepreneurial skills to successfully run a boutique.",
-            image: "courses/boutique.jpg",
-            intro: "A specialized training program designed to equip individuals with the skills needed to start and grow a lifestyle boutique.",
+            image: "/courses/boutique.jpg",
+            intro: "A specialized training program designed to equip individuals with the skills needed to start, stock, and grow a lifestyle or fashion boutique.",
             careerOutcomes: ["Boutique Owner", "Retail Manager", "Fashion Buyer", "E-commerce Entrepreneur"],
             programs: [
                 {
-                    name: "BOUTIQUE MANAGEMENT",
+                    name: "Specialized Course",
                     duration: "3 Months & 6 Months",
                     eligibility: "Anyone looking to open a boutique.",
                     description: "Practical aspects of running a boutique successfully.",
-                    modules: ["Business Management", "Sales Strategies", "Product Development", "Social Media Marketing", "Inventory Control"]
+                    modules: ["Inventory Assortment", "Sales Strategies", "Store Layout & Window Display", "Social Media Marketing", "Inventory Control"]
+                }
+            ]
+        },
+        {
+            id: 'cosmetology',
+            title: "Cosmetology",
+            description: "An incredibly broad study encompassing skin care, hair care, makeup, and non-invasive aesthetic treatments.",
+            image: "/courses/makeup_new.png",
+            intro: "Dive deep into the science of beauty. From advanced chemical hair treatments to complex skincare regimens, become a fully equipped aesthetic professional.",
+            careerOutcomes: ["Clinical Cosmetologist", "Salon Owner", "Skin & Hair Specialist", "Beauty Therapist"],
+            programs: [
+                {
+                    name: "Specialized Course",
+                    duration: "1 Year",
+                    eligibility: "10+2 from any recognized board.",
+                    description: "Comprehensive beauty and scientific aesthetic training.",
+                    modules: ["Advanced Skincare & Peels", "Chemical Hair Treatments", "Laser Hair Reduction Intro", "Nail Art & Extensions", "Spa Therapies"]
                 }
             ]
         }

@@ -16,11 +16,11 @@ export default function PlacementSection() {
                 <div className="flex flex-col lg:flex-row gap-16 items-center">
 
                     <FadeIn direction="left" className="lg:w-1/2">
-                        <span className="text-[var(--color-brand-red)] text-sm tracking-widest uppercase font-bold">Career First Approach</span>
+                        <span className="text-[var(--color-brand-pink)] text-sm tracking-widest uppercase font-bold">Career First Approach</span>
                         <h2 className="font-heading text-4xl md:text-5xl font-bold text-[var(--color-heading)] mt-4 mb-6">
                             Dedicated Placement Cell
                         </h2>
-                        <div className="w-16 h-1 bg-[var(--color-brand-red)] rounded-full mb-8"></div>
+                        <div className="w-16 h-1 bg-[var(--color-brand-pink)] rounded-full mb-8"></div>
                         <p className="text-lg text-[var(--color-text)] mb-6 leading-relaxed">
                             At IIFTD, your education culminates in a tangible career path. Our dedicated placement cell works tirelessly to bridge the gap between our creative talent and top industry recruiters.
                         </p>
@@ -32,7 +32,7 @@ export default function PlacementSection() {
                                 const Icon = stat.icon;
                                 return (
                                     <div key={idx} className="flex gap-4">
-                                        <div className="text-[var(--color-brand-red)] shrink-0">
+                                        <div className="text-[var(--color-brand-pink)] shrink-0">
                                             <Icon size={24} />
                                         </div>
                                         <div>
@@ -50,7 +50,7 @@ export default function PlacementSection() {
                             <img src="/assets/hero.jpg" alt="Student Presentation" className="rounded-2xl object-cover h-64 w-full shadow-lg" />
                             <img src="/assets/interior.jpg" alt="Industry Visit" className="rounded-2xl object-cover h-64 w-full shadow-lg mt-12" />
                         </div>
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[var(--color-brand-red)] text-white p-6 rounded-full shadow-xl text-center w-36 h-36 flex flex-col justify-center items-center border-[6px] border-white">
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[var(--color-brand-pink)] text-white p-6 rounded-full shadow-xl text-center w-36 h-36 flex flex-col justify-center items-center border-[6px] border-white">
                             <span className="font-heading text-3xl font-bold block mb-1">Top</span>
                             <span className="text-xs font-bold uppercase tracking-wider border-t border-white/30 pt-1">Recruiters</span>
                         </div>

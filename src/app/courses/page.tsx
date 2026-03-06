@@ -6,13 +6,15 @@ import { ArrowRight } from "lucide-react";
 export default function CoursesPage() {
     const { courses } = siteData;
 
-    // Define specific gradients for the overlay based on the course ID
+    // Define specific gradients for the overlay based on the course ID or prefix
     const getGradientForCourse = (id: string) => {
+        if (id.startsWith('fashion-design')) return 'from-purple-600/60 via-purple-500/20 to-transparent';
+        if (id.startsWith('interior-design')) return 'from-teal-600/60 via-teal-500/20 to-transparent';
+        if (id.startsWith('makeup-artistry')) return 'from-rose-600/60 via-rose-500/20 to-transparent';
+        if (id.startsWith('cosmetology')) return 'from-pink-500/60 via-pink-400/20 to-transparent';
+        if (id.startsWith('garment-manufacturing')) return 'from-slate-700/60 via-slate-600/20 to-transparent';
+
         switch (id) {
-            case 'fashion-design':
-                return 'from-purple-600/60 via-purple-500/20 to-transparent';
-            case 'interior-design':
-                return 'from-teal-600/60 via-teal-500/20 to-transparent';
             case 'textile-design':
                 return 'from-orange-600/60 via-orange-500/20 to-transparent';
             case 'luxury-brand-management':
@@ -22,7 +24,7 @@ export default function CoursesPage() {
             case 'boutique-management':
                 return 'from-indigo-600/60 via-indigo-500/20 to-transparent';
             default:
-                return 'from-[var(--color-brand-red)]/60 to-transparent';
+                return 'from-[var(--color-brand-dark-blue)]/60 to-transparent';
         }
     };
 
@@ -31,7 +33,7 @@ export default function CoursesPage() {
             <section className="pt-32 pb-8 bg-[var(--color-bg-cream)] relative overflow-hidden">
                 <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
                     <FadeIn direction="up">
-                        <span className="text-[var(--color-brand-red)] text-sm tracking-widest uppercase font-bold">Discover Your Passion</span>
+                        <span className="text-[var(--color-brand-pink)] text-sm tracking-widest uppercase font-bold">Discover Your Passion</span>
                         <h1 className="font-heading text-5xl md:text-6xl mt-4 font-bold text-[var(--color-heading)] mb-4">Career Streams</h1>
                     </FadeIn>
                 </div>

@@ -30,7 +30,7 @@ export default function RootLayout({
         className={`${wixText.variable} ${wixDisplay.variable} antialiased bg-[var(--color-bg-light)] text-[var(--color-text)]`}
       >
         <Navbar />
-        <main className="min-h-screen pt-20">
+        <main className="min-h-screen">
           {children}
         </main>
         <Footer />

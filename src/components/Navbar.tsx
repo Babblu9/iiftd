@@ -1,61 +1,57 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Zap } from "lucide-react";
-import { usePathname } from "next/navigation";
+import { Menu, X, Phone, Mail, Calendar, Facebook, Instagram, Youtube, ChevronDown } from "lucide-react";
 import Logo from "./Logo";
 
 export default function Navbar() {
-    const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-    const pathname = usePathname();
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 20);
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
 
     const toggleDropdown = (name: string) => {
         if (activeDropdown === name) setActiveDropdown(null);
         else setActiveDropdown(name);
     };
 
-    // The Admissions page retains a dark hero for now, but Home is light
-    const isDarkBgAtTop = pathname === '/admissions';
-    const textColorClass = scrolled ? "text-black hover:text-[var(--color-brand-red)]" : (isDarkBgAtTop ? "text-white hover:text-gray-200" : "text-black hover:text-[var(--color-brand-red)]");
-    const logoClass = `transition-all duration-300 ${scrolled ? "scale-[0.85] origin-left" : "scale-100 origin-left"} hover:scale-[1.05]`;
-    const brandTextClass = scrolled ? "text-black hidden" : "text-black hidden"; // Hidden because the new vector logo is the full brand
-
     return (
-        <header
-            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-white/90 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"
-                }`}
-        >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-                <Link href="/" className="flex items-center gap-4 group">
-                    <div className={logoClass}>
-                        <Logo />
-                    </div>
+        <header className="w-full z-50 bg-[#F4F4F4]">
+            {/* Top Tier: Contact Info */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex justify-between items-center">
+                <Link href="/" className="flex items-center">
+                    <Logo className="h-20 md:h-28 lg:h-32 w-auto scale-110 origin-left" />
                 </Link>
 
-                {/* Desktop Nav */}
-                <nav className="hidden lg:flex items-center gap-8">
-                    <Link href="/" className={`font-heading font-semibold text-sm tracking-wide transition-colors ${textColorClass}`}>Home</Link>
-                    <Link href="/about" className={`font-heading font-semibold text-sm tracking-wide transition-colors ${textColorClass}`}>About Us</Link>
-
-                    <Link href="/courses" className={`font-heading font-semibold text-sm tracking-wide transition-colors ${textColorClass}`}>Courses</Link>
-
-                    <Link href="/contact" className={`font-heading font-semibold text-sm tracking-wide transition-colors ${textColorClass}`}>Contact Us</Link>
-                    <Link href="/contact" className="btn-primary gap-2 !py-2.5 !px-6">
-                        Enquire Now <Zap size={16} fill="currentColor" />
-                    </Link>
-                </nav>
+                {/* Desktop Contact Info */}
+                <div className="hidden lg:flex items-center gap-10">
+                    <div className="flex items-center gap-3">
+                        <Phone className="text-[var(--color-brand-red)]" size={28} />
+                        <div className="flex flex-col">
+                            <span className="text-black font-semibold text-sm">+91-9893044522</span>
+                            <span className="text-gray-600 text-[11px]">Get in touch</span>
+                        </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                        <Mail className="text-[var(--color-brand-red)]" size={28} />
+                        <div className="flex flex-col">
+                            <span className="text-black font-semibold text-sm">iiftbhopal123@gmail.com</span>
+                            <span className="text-gray-600 text-[11px]">Mail Us</span>
+                        </div>
+                    </div>
+                    {/* Social Icons replacing Mon-Sat */}
+                    <div className="flex items-center gap-5 pl-4 border-l border-gray-200">
+                        <Link href="#" className="text-[var(--color-brand-red)] hover:scale-110 transition-transform">
+                            <Facebook size={22} fill="currentColor" />
+                        </Link>
+                        <Link href="#" className="text-[var(--color-brand-red)] hover:scale-110 transition-transform">
+                            <Instagram size={24} />
+                        </Link>
+                        <Link href="#" className="text-[var(--color-brand-red)] hover:scale-110 transition-transform">
+                            <Youtube size={26} />
+                        </Link>
+                    </div>
+                </div>
 
                 {/* Mobile Menu Button */}
                 <button
@@ -66,6 +62,83 @@ export default function Navbar() {
                 </button>
             </div>
 
+            {/* Bottom Tier: Navigation Links */}
+            <div className="hidden lg:block bg-[var(--color-brand-red)]">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center items-center h-[56px]">
+                    <nav className="flex items-center gap-6 lg:gap-8 xl:gap-10 h-full">
+                        <Link href="/" className="text-white text-[13px] font-extrabold tracking-wider hover:text-white/80 transition-colors h-full flex items-center uppercase">
+                            HOME
+                        </Link>
+
+                        <div className="relative group h-full flex items-center">
+                            <button className="flex items-center gap-1 text-white text-[13px] font-extrabold tracking-wider hover:text-white/80 transition-colors py-4 uppercase">
+                                FASHION DESIGN <ChevronDown size={14} />
+                            </button>
+                            <div className="absolute top-full left-0 w-64 bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 flex flex-col pt-2 border-t-2 border-[var(--color-brand-red)]">
+                                <Link href="/courses/fashion-design-diploma" className="px-4 py-2 text-sm text-black font-semibold hover:bg-gray-50 hover:text-[var(--color-brand-red)]">Diploma</Link>
+                                <Link href="/courses/fashion-design-advance-diploma" className="px-4 py-2 text-sm text-black font-semibold hover:bg-gray-50 hover:text-[var(--color-brand-red)]">Advance Diploma</Link>
+                                <Link href="/courses/fashion-design-bachelors" className="px-4 py-2 text-sm text-black font-semibold hover:bg-gray-50 hover:text-[var(--color-brand-red)]">Bachelors</Link>
+                                <Link href="/courses/fashion-design-masters" className="px-4 py-2 text-sm text-black font-semibold hover:bg-gray-50 hover:text-[var(--color-brand-red)]">Masters</Link>
+                                <Link href="/courses/fashion-design-master-diploma" className="px-4 py-2 text-sm text-black font-semibold hover:bg-gray-50 hover:text-[var(--color-brand-red)]">Master Diploma</Link>
+                            </div>
+                        </div>
+
+                        <div className="relative group h-full flex items-center">
+                            <button className="flex items-center gap-1 text-white text-[13px] font-extrabold tracking-wider hover:text-white/80 transition-colors py-4 uppercase">
+                                INTERIOR DESIGN <ChevronDown size={14} />
+                            </button>
+                            <div className="absolute top-full left-0 w-64 bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 flex flex-col pt-2 border-t-2 border-[var(--color-brand-red)]">
+                                <Link href="/courses/interior-design-diploma" className="px-4 py-2 text-sm text-black font-semibold hover:bg-gray-50 hover:text-[var(--color-brand-red)]">Diploma</Link>
+                                <Link href="/courses/interior-design-advance-diploma" className="px-4 py-2 text-sm text-black font-semibold hover:bg-gray-50 hover:text-[var(--color-brand-red)]">Advance Diploma</Link>
+                                <Link href="/courses/interior-design-bachelors" className="px-4 py-2 text-sm text-black font-semibold hover:bg-gray-50 hover:text-[var(--color-brand-red)]">Bachelors</Link>
+                                <Link href="/courses/interior-design-masters" className="px-4 py-2 text-sm text-black font-semibold hover:bg-gray-50 hover:text-[var(--color-brand-red)]">Masters</Link>
+                                <Link href="/courses/interior-design-master-diploma" className="px-4 py-2 text-sm text-black font-semibold hover:bg-gray-50 hover:text-[var(--color-brand-red)]">Master Diploma</Link>
+                            </div>
+                        </div>
+
+                        <div className="relative group h-full flex items-center">
+                            <button className="flex items-center gap-1 text-white text-[13px] font-extrabold tracking-wider hover:text-white/80 transition-colors py-4 uppercase">
+                                MAKEUP ARTISTRY <ChevronDown size={14} />
+                            </button>
+                            <div className="absolute top-full left-0 w-64 bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 flex flex-col pt-2 border-t-2 border-[var(--color-brand-red)]">
+                                <Link href="/courses/makeup-artistry-diploma" className="px-4 py-2 text-sm text-black font-semibold hover:bg-gray-50 hover:text-[var(--color-brand-red)]">Diploma</Link>
+                                <Link href="/courses/makeup-artistry-advance-diploma" className="px-4 py-2 text-sm text-black font-semibold hover:bg-gray-50 hover:text-[var(--color-brand-red)]">Advance Diploma</Link>
+                                <Link href="/courses/makeup-artistry-bachelors" className="px-4 py-2 text-sm text-black font-semibold hover:bg-gray-50 hover:text-[var(--color-brand-red)]">Bachelors</Link>
+                                <Link href="/courses/makeup-artistry-masters" className="px-4 py-2 text-sm text-black font-semibold hover:bg-gray-50 hover:text-[var(--color-brand-red)]">Masters</Link>
+                                <Link href="/courses/makeup-artistry-master-diploma" className="px-4 py-2 text-sm text-black font-semibold hover:bg-gray-50 hover:text-[var(--color-brand-red)]">Master Diploma</Link>
+                            </div>
+                        </div>
+
+                        <div className="relative group h-full flex items-center">
+                            <button className="flex items-center gap-1 text-white text-[13px] font-extrabold tracking-wider hover:text-white/80 transition-colors py-4 uppercase">
+                                SPECIALIZED COURSES <ChevronDown size={14} />
+                            </button>
+                            <div className="absolute top-full left-0 w-80 bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 flex flex-col pt-2 border-t-2 border-[var(--color-brand-red)]">
+                                <Link href="/courses/luxury-brand-management" className="px-4 py-2 text-sm text-black font-semibold hover:bg-gray-50 hover:text-[var(--color-brand-red)]">Luxury Brand Management</Link>
+                                <Link href="/courses/garment-manufacturing-fashion-designing" className="px-4 py-2 text-sm text-black font-semibold hover:bg-gray-50 hover:text-[var(--color-brand-red)]">Garment Manufacturing and Fashion Designing</Link>
+                                <Link href="/courses/fashion-styling-communication" className="px-4 py-2 text-sm text-black font-semibold hover:bg-gray-50 hover:text-[var(--color-brand-red)]">Fashion Styling & Communication</Link>
+                                <Link href="/courses/fashion-design-boutique-management" className="px-4 py-2 text-sm text-black font-semibold hover:bg-gray-50 hover:text-[var(--color-brand-red)]">Fashion Design & Boutique Management</Link>
+                                <Link href="/courses/cosmetology" className="px-4 py-2 text-sm text-black font-semibold hover:bg-gray-50 hover:text-[var(--color-brand-red)]">Cosmetology</Link>
+                            </div>
+                        </div>
+
+                        <Link href="/admissions" className="bg-[#1a237e] text-white text-[13px] font-extrabold tracking-wider hover:bg-[#000051] transition-colors h-[36px] px-4 rounded-md flex items-center uppercase shadow-md">
+                            ADMISSIONS
+                        </Link>
+
+                        <div className="relative group h-full flex items-center">
+                            <button className="flex items-center gap-1 text-white text-[13px] font-extrabold tracking-wider hover:text-white/80 transition-colors py-4 uppercase">
+                                MORE <ChevronDown size={14} />
+                            </button>
+                            <div className="absolute top-full right-0 w-48 bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 flex flex-col pt-2 border-t-2 border-[var(--color-brand-red)]">
+                                <Link href="/about" className="px-4 py-2 text-sm text-black font-semibold hover:bg-gray-50 hover:text-[var(--color-brand-red)]">About Us</Link>
+                                <Link href="/contact" className="px-4 py-2 text-sm text-black font-semibold hover:bg-gray-50 hover:text-[var(--color-brand-red)]">Contact Us</Link>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
             {/* Mobile Menu Drawer */}
             <AnimatePresence>
                 {mobileMenuOpen && (
@@ -74,7 +147,7 @@ export default function Navbar() {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: "100%" }}
                         transition={{ type: "tween", duration: 0.3 }}
-                        className="fixed top-0 right-0 w-4/5 max-w-sm h-screen bg-white border-l border-gray-100 p-6 z-40 overflow-y-auto shadow-2xl"
+                        className="fixed top-0 right-0 w-4/5 max-w-sm h-screen bg-white border-l border-gray-100 p-6 z-50 overflow-y-auto shadow-2xl"
                     >
                         <div className="flex justify-end mb-8 mt-4">
                             <button className="text-black" onClick={() => setMobileMenuOpen(false)}>
@@ -83,32 +156,44 @@ export default function Navbar() {
                         </div>
 
                         <div className="flex flex-col gap-6">
-                            <Link href="/" className="text-lg font-bold text-black tracking-wide" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-                            <Link href="/about" className="text-lg font-bold text-black tracking-wide" onClick={() => setMobileMenuOpen(false)}>About Us</Link>
+                            <Link href="/" className="text-lg font-bold text-black tracking-wide" onClick={() => setMobileMenuOpen(false)}>HOME</Link>
+                            <Link href="/courses/fashion-design" className="text-lg font-bold text-black tracking-wide" onClick={() => setMobileMenuOpen(false)}>FASHION DESIGN</Link>
+                            <Link href="/courses/interior-design" className="text-lg font-bold text-black tracking-wide" onClick={() => setMobileMenuOpen(false)}>INTERIOR DESIGN</Link>
+                            <Link href="/courses" className="text-lg font-bold text-black tracking-wide" onClick={() => setMobileMenuOpen(false)}>MAKEUP ARTISTRY</Link>
+                            <Link href="/courses" className="text-lg font-bold text-black tracking-wide" onClick={() => setMobileMenuOpen(false)}>SPECIALIZED COURSES</Link>
+                            <Link href="/about" className="text-lg font-bold text-black tracking-wide" onClick={() => setMobileMenuOpen(false)}>ABOUT US</Link>
+                            <Link href="/contact" className="text-lg font-bold text-black tracking-wide" onClick={() => setMobileMenuOpen(false)}>CONTACT US</Link>
 
-                            <Link href="/courses" className="text-lg font-bold text-black tracking-wide" onClick={() => setMobileMenuOpen(false)}>Courses</Link>
+                            <div className="h-px bg-gray-200 my-4" />
 
-                            <Link href="/contact" className="text-lg font-bold text-black tracking-wide" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
-                            <Link href="/contact" className="btn-primary w-full mt-4 gap-2" onClick={() => setMobileMenuOpen(false)}>
-                                Enquire Now <Zap size={18} fill="currentColor" />
-                            </Link>
+                            {/* Mobile Contact Info */}
+                            <div className="flex flex-col gap-4">
+                                <div className="flex items-center gap-3">
+                                    <Phone className="text-[var(--color-brand-red)]" size={20} />
+                                    <span className="text-black font-medium text-sm">+91-9893044522</span>
+                                </div>
+                                <div className="flex items-center gap-3">
+                                    <Mail className="text-[var(--color-brand-red)]" size={20} />
+                                    <span className="text-black font-medium text-sm">iiftbhopal123@gmail.com</span>
+                                </div>
+                            </div>
+
+                            {/* Mobile Social */}
+                            <div className="flex items-center gap-4 mt-4">
+                                <Link href="#" className="border border-[var(--color-brand-red)] p-1.5 rounded-sm text-black hover:bg-[var(--color-brand-red)] hover:text-white transition-colors">
+                                    <Facebook size={20} />
+                                </Link>
+                                <Link href="#" className="border border-[var(--color-brand-red)] p-1.5 rounded-sm text-black hover:bg-[var(--color-brand-red)] hover:text-white transition-colors">
+                                    <Instagram size={20} />
+                                </Link>
+                                <Link href="#" className="border border-[var(--color-brand-red)] p-1.5 rounded-sm text-black hover:bg-[var(--color-brand-red)] hover:text-white transition-colors">
+                                    <Youtube size={20} />
+                                </Link>
+                            </div>
                         </div>
                     </motion.div>
                 )}
             </AnimatePresence>
-            <style jsx>{`
-        .nav-item {
-          font-family: var(--font-body);
-          font-size: 0.95rem;
-          color: black;
-          font-weight: 600;
-          transition: color 0.3s;
-          position: relative;
-        }
-        .nav-item:hover, .group:hover .nav-item {
-          color: var(--color-brand-red);
-        }
-      `}</style>
         </header>
     );
 }

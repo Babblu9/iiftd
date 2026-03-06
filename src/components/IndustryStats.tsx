@@ -28,7 +28,7 @@ export default function IndustryStats() {
                         return (
                             <FadeIn key={i} delay={0.1 * i} direction="up">
                                 <div className="p-8 rounded-3xl bg-[var(--color-bg-cream)] box-shadow-soft border border-gray-100 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300">
-                                    <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center text-[var(--color-brand-red)] mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                                    <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center text-[var(--color-brand-pink)] mb-6 shadow-sm group-hover:scale-110 transition-transform">
                                         <Icon size={28} />
                                     </div>
                                     <h3 className="font-heading text-3xl font-bold text-[var(--color-heading)] mb-2">
