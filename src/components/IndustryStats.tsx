@@ -14,9 +14,11 @@ export default function IndustryStats() {
         <section className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <FadeIn direction="up" className="text-center mb-16">
-                    <h2 className="font-heading text-4xl font-bold text-[var(--color-heading)] mb-4">
-                        The Future of Fashion & Design
-                    </h2>
+                    <div className="inline-block px-6 py-3 bg-gradient-to-r from-[#0B1B3D] via-[#1a237e] to-[#D81B60] rounded-2xl mb-6">
+                        <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+                            The Future of Fashion & Design
+                        </h2>
+                    </div>
                     <p className="text-lg text-[var(--color-text)] max-w-2xl mx-auto">
                         The design industry is experiencing unprecedented growth. Position yourself at the forefront of a booming global economy.
                     </p>
